@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Flex", serif;
+  margin: 0;
+  /* padding: 10px; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2{
+  font-family: "Roboto Flex", serif;
+  color: white;
+}
+
+p{
+  font-family: "Roboto Flex", serif;
+  color: white;
+}
+
+.navbar {
+  background-color: #27374d;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.navbar ul  {
+  font-family: "Roboto Flex", serif;
+  display: flex;
+  list-style: none ;
+  padding:0 ;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li{
+  margin: 0 15px;
+}
+
+.navbar a  {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+
+
+  /* margin-top: 20px; */
+}
+
+
+.sidebar{
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 25%;
+  background-color: #9db2bf;
+  padding: 20px;
+
+}
+
+.main-content{
+  width: 75%;
+  background-color: #dde6ed;
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;
+
+
+}
+
+.tabla1 {
+  display: grid;
+  grid-template-columns: 1fr ; 
+  grid-template-rows: 1fr 1fr;    
+  gap: 10px;                      
+}
+
+.celda1 {
+  background-color: #9db2bf;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: white;
+
+}
+
+.tabla2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;    
+  gap: 10px;                      
+}
+
+.celda2 {
+  background-color: #9db2bf;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: white;
+
+}
+
+.imagen1{
+  max-height: 180px;
+}
+
+.contacto{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+footer {
+  height: 10vh;
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2em;
+}
+
+/* Media query para tabletas */
+@media (min-width: 600px) 
+  body{
+  font-size: 18px;
+  padding: 20px;
+}
+
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* Media query para computadoras de escritorio */
+@media (min-width: 1024px) 
+body{
+  font-size: 20px;
+  padding: 30px;
+}
+
+img {
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
