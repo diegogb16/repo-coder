@@ -173,7 +173,10 @@ img {
   width: 50%;
 }
 
-
+.gradientes { 
+border: green solid 5px;
+background-image: -moz-radial-gradient();
+}
 
 
 
