@@ -1,47 +1,13 @@
-/* Reset general */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* animaciones*/
-:root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
-}
-
-/* fuente */
-body {
-    font-family: "Roboto Flex", serif;
-    background-color: #dde6ed;
-}
-
-/* header */
-
-
-.bg-dark {
-    background-color: #27374d !important;
-        .navbar {
-            padding: 15px;
-            .nav-link {
-                color:white !important;
-            }
-        }
-}
-
-
-
 /*container*/
 
 .container mt-4{
     padding-right: 0px !important;
     padding-left: 0px !important;
     
-    aside {
-        width: 25%;
-        background-color: #9db2bf;
-    }
+aside {
+    width: 25%;
+    background-color: #9db2bf;
+}
 }
 
 .bg-light {
@@ -114,10 +80,4 @@ li{
             }
         }
     }
-}
-
-/* Footer */
-footer {
-    position: relative;
-    width: 100%;
 }
