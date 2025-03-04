@@ -1,24 +1,6 @@
-/* Reset general */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* animaciones*/
-:root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
-}
-
-/* fuente */
-body {
-    font-family: "Roboto Flex", serif;
-    background-color: #dde6ed;
-}
-
-/* header */
-
+@use "partials/variables";
+@use "partials/general";
 @use "partials/header";
 @use "partials/container";
 
@@ -26,8 +8,4 @@ body {
 
 
 
-/* Footer */
-footer {
-    position: relative;
-    width: 100%;
-}
+

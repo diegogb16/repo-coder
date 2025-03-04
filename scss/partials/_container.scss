@@ -6,12 +6,12 @@
     
 aside {
     width: 25%;
-    background-color: #9db2bf;
+    background-color: $azulMedio;
 }
 }
 
 .bg-light {
-    background-color: #9db2bf !important;
+    background-color: $azulMedio !important;
 }
 .custom-rounded {
     border-radius: 2rem;
@@ -34,13 +34,12 @@ li{
 
 .col-md-8{
     .tabla1 {
-        display: flex;
-        flex-direction: column; /* Las filas se organizan en columna */
-        gap: 10px; /* Espaciado entre filas */
+        @include flex (column, 10px);
+        
         padding: 5px;
         .fila1 {
             display: flex;
-            gap: 10px; /* Espaciado entre celdas */
+            gap: 10px; 
             @media (max-width: 600px) {
                 .fila1 {
                     flex-direction: column; /* En móviles, las celdas se apilan */
@@ -48,8 +47,8 @@ li{
             }
             .celda1 {
                 flex: 1; /* Todas las celdas ocupan el mismo ancho */
-                background-color: #9db2bf;
-                border: 1px solid #9db2bf;
+                background-color: $azulMedio;
+                border: 1px solid $azulMedio;
                 color:white;
                 padding: 20px;
                 text-align: center;
@@ -62,13 +61,9 @@ li{
         flex-wrap: wrap; /* Permite que las celdas se ajusten */
         gap: 10px;
         .celda2 {
+            @extend .celda1;
             flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
-            background-color: #9db2bf;
-            border: 1px solid #9db2bf;
-            color:white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 2rem;
+            
             @media (max-width: 600px) {
                 .celda2 {
                     flex: 1 1 100%; /* Hace que cada celda ocupe todo el ancho disponible */

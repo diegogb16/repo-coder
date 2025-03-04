@@ -1,0 +1,11 @@
+// Variables de color //
+
+$azulOscuro: #27374d;
+$azulMedio: #9db2bf ;
+$azulClaro: #dde6ed;
+
+@mixin flex ($direccion,$gap){
+    display: flex;
+    flex-direction: $direccion;
+    gap: $gap;
+}

@@ -1,0 +1,18 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* animaciones*/
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+/* fuente */
+body {
+    font-family: "Roboto Flex", serif;
+    background-color: $azulClaro;
+}
