@@ -1,139 +1,116 @@
+@charset "UTF-8";
 /* Reset general */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* animaciones*/
 :root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
+/* fuente */
 body {
-    font-family: "Roboto Flex", serif;
+  font-family: "Roboto Flex", serif;
+  background-color: #dde6ed;
 }
+
+/* header */
 .bg-dark {
-    background-color: #27374d !important;
+  background-color: #27374d !important;
+}
+.bg-dark .navbar {
+  padding: 15px;
+}
+.bg-dark .navbar .nav-link {
+  color: white !important;
 }
 
-/* Espaciado en el header */
-.navbar {
-    padding: 15px;
+/*container*/
+.container mt-4 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
-
-.nav-link {
-    color:white !important;
+.container mt-4 aside {
+  width: 25%;
+  background-color: #9db2bf;
 }
-
-.container mt-4{
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    margin
-}
-
-
-/* Aside */
-/* .bg-light{
-    background-color: #9db2bf !important ; 
-} */
 
 .bg-light {
-    background-color: #9db2bf !important;
+  background-color: #9db2bf !important;
 }
 
 .custom-rounded {
-    border-radius: 2rem; /* Ajusta el valor según lo necesites */
+  border-radius: 2rem;
 }
 
-.carnet{
-width: 100%; /* Imagen ocupa todo el ancho disponible */
-max-width: 200px; /* Limita el tamaño en pantallas grandes */
-display: block;
-margin: 0 auto;
+li {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+li .carnet {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
-aside {
-width: 25%;
-background-color: #9db2bf;
+/*section*/
+.col-md-8 .tabla1 {
+  display: flex;
+  flex-direction: column; /* Las filas se organizan en columna */
+  gap: 10px; /* Espaciado entre filas */
+  padding: 5px;
 }
-
-aside li{
-    margin: 0;
-    color: white;
-    text-decoration: none;
-    list-style: none;
+.col-md-8 .tabla1 .fila1 {
+  display: flex;
+  gap: 10px; /* Espaciado entre celdas */
 }
-
-.tabla1 {
-    display: flex;
-    flex-direction: column; /* Las filas se organizan en columna */
-    gap: 10px; /* Espaciado entre filas */
-    padding: 5px;
-}
-
-/* Estilos de cada fila */
-.fila1 {
-    display: flex;
-    gap: 10px; /* Espaciado entre celdas */
-}
-
-/* Estilos de las celdas */
-.celda1 {
-    flex: 1; /* Todas las celdas ocupan el mismo ancho */
-    background-color: #9db2bf;
-    border: 1px solid #9db2bf;
-    color:white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 2rem; /* Bordes redondeados */
-}
-
-/* Responsividad: en pantallas pequeñas, cada celda ocupará toda la fila */
 @media (max-width: 600px) {
-    .fila1 {
-        flex-direction: column; /* En móviles, las celdas se apilan */
-    }
+  .col-md-8 .tabla1 .fila1 .fila1 {
+    flex-direction: column; /* En móviles, las celdas se apilan */
+  }
 }
-
-.tabla2 {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las celdas se ajusten */
-    gap: 10px;
-    /* margin-top: 10px; */
+.col-md-8 .tabla1 .fila1 .celda1 {
+  flex: 1; /* Todas las celdas ocupan el mismo ancho */
+  background-color: #9db2bf;
+  border: 1px solid #9db2bf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 2rem; /* Bordes redondeados */
 }
-
-
-
-.celda2 {
-    flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
-    background-color: #9db2bf;
-    border: 1px solid #9db2bf;
-    color:white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 2rem;
+.col-md-8 .tabla2 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las celdas se ajusten */
+  gap: 10px;
 }
-
-/* Responsividad: en pantallas pequeñas, las celdas se apilan en una columna */
+.col-md-8 .tabla2 .celda2 {
+  flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
+  background-color: #9db2bf;
+  border: 1px solid #9db2bf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 2rem;
+}
 @media (max-width: 600px) {
-    .fila2 {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    }
-
-    .celda2 {
-        flex: 0 0 100%; /* Hace que cada celda ocupe todo el ancho disponible */
-    }
+  .col-md-8 .tabla2 .celda2 .celda2 {
+    flex: 1 1 100%; /* Hace que cada celda ocupe todo el ancho disponible */
+  }
 }
-
-.imagen1{
-    max-height: 180px;
-    border-radius: 10px;
+.col-md-8 .tabla2 .celda2 .imagen1 {
+  max-height: 180px;
+  border-radius: 10px;
 }
-
 
 /* Footer */
 footer {
-    position: relative;
-    width: 100%;
-}
+  position: relative;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
