@@ -1,188 +1,157 @@
+/* Reset general */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
 
 body {
-  font-family: "Roboto Flex", serif;
-  margin: 0;
-  /* padding: 10px; */
+    font-family: "Roboto Flex", serif;
+}
+.bg-dark {
+    background-color: #27374d !important;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-h2{
-  font-family: "Roboto Flex", serif;
-  color: white;
-}
-
-p{
-  font-family: "Roboto Flex", serif;
-  color: white;
-}
-
+/* Espaciado en el header */
 .navbar {
-  background-color: #27374d;
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-
+    padding: 15px;
 }
 
-.navbar ul  {
-  font-family: "Roboto Flex", serif;
-  display: flex;
-  list-style: none ;
-  padding:0 ;
-  margin: 0;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.nav-link {
+    color:white !important;
 }
 
-.navbar li{
-  margin: 0 15px;
-}
-
-.navbar a  {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
-}
-
-.container{
-  display: flex;
-  flex-direction: column;
-  height: 70vh;
-
-
-  /* margin-top: 20px; */
+.container mt-4{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin
 }
 
 
-.sidebar{
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  width: 25%;
-  background-color: #9db2bf;
-  padding: 20px;
-
+/* Aside */
+.bg-light{
+    background-color: #9db2bf !important; 
+    
 }
 
-.main-content{
-  width: 75%;
-  background-color: #dde6ed;
-  padding: 20px;
-  margin-left: 0;
-  margin-right: 0;
-
-
+.custom-rounded {
+    border-radius: 2rem; /* Ajusta el valor según lo necesites */
 }
 
-.tabla1 {
-  display: grid;
-  grid-template-columns: 1fr ; 
-  grid-template-rows: 1fr 1fr;    
-  gap: 10px;                      
+.carnet{
+width: 100%; /* Imagen ocupa todo el ancho disponible */
+max-width: 200px; /* Limita el tamaño en pantallas grandes */
+display: block;
+margin: 0 auto;
+}
+
+aside {
+width: 25%;
+background-color: #9db2bf;
+}
+
+aside li{
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Section */
+section {
+    /* padding-left: 15px; */
+}
+
+/* .tabla1 {
+    display: grid;
+    grid-template-columns: 1fr ; 
+    grid-template-rows: 1fr 1fr;    
+    gap: 10px;                      
 }
 
 .celda1 {
-  background-color: #9db2bf;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  color: white;
+    background-color: #9db2bf;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: white;
 
+} */
+.tabla1 {
+    display: flex;
+    flex-direction: column; /* Las filas se organizan en columna */
+    gap: 10px; /* Espaciado entre filas */
+    padding: 5px;
+}
+
+/* Estilos de cada fila */
+.fila1 {
+    display: flex;
+    gap: 10px; /* Espaciado entre celdas */
+}
+
+/* Estilos de las celdas */
+.celda1 {
+    flex: 1; /* Todas las celdas ocupan el mismo ancho */
+    background-color: #9db2bf;
+    border: 1px solid #9db2bf;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 2rem; /* Bordes redondeados */
+}
+
+/* Responsividad: en pantallas pequeñas, cada celda ocupará toda la fila */
+@media (max-width: 600px) {
+    .fila1 {
+        flex-direction: column; /* En móviles, las celdas se apilan */
+    }
 }
 
 .tabla2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr;    
-  gap: 10px;                      
+    display: flex;
+    flex-wrap: wrap; /* Permite que las celdas se ajusten */
+    gap: 10px;
+    /* margin-top: 10px; */
 }
 
-.celda2 {
-  background-color: #9db2bf;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  color: white;
 
+
+.celda2 {
+    flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
+    background-color: #9db2bf;
+    border: 1px solid #9db2bf;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+/* Responsividad: en pantallas pequeñas, las celdas se apilan en una columna */
+@media (max-width: 600px) {
+    .fila2 {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .celda2 {
+        flex: 0 0 100%; /* Hace que cada celda ocupe todo el ancho disponible */
+    }
 }
 
 .imagen1{
-  max-height: 180px;
-}
-
-.contacto{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  
+    max-height: 180px;
+    border-radius: 10px;
 }
 
 
-
-
+/* Footer */
 footer {
-  height: 10vh;
-  background-color: #34495e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.2em;
+    position: relative;
+    width: 100%;
 }
-
-/* Media query para tabletas */
-@media (min-width: 600px) 
-  body{
-  font-size: 18px;
-  padding: 20px;
-}
-
-.navbar {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.container {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-
-/* Media query para computadoras de escritorio */
-@media (min-width: 1024px) 
-body{
-  font-size: 20px;
-  padding: 30px;
-}
-
-img {
-  width: 50%;
-}
-
-.gradientes { 
-border: green solid 5px;
-background-image: -moz-radial-gradient();
-}
-
-
-
-
-
-
-
-
-

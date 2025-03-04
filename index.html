@@ -3,70 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUONA-D.I.</title>
-    <!--CSS-->
+    <title>Mi Página Responsive</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    <!--bootstrap-->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-
+    <!--animate-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
-    <header>
-      <nav class="navbar">
-        <ul>
-          <li>
-            <h2>BUONA DI</h2>
-            <a href="index.html">PRESENTACION</a>
-            <a href="pages/formacion.html">FORMACION ACADEMICA</a>
-            <a href="pages/portfolio.html">PORTFOLIO</a>
-            <a href="pages/clientes.html">CLIENTES</a>
-            <a href="pages/contacto.html">CONTACTO</a>
-          </li>
-        </ul>
-      </nav>
+
+    <!-- Header con Navbar -->
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <h1 class="navbar-brand ">BUONA-D.I.</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item animate__animated animate__backInRight"><a class="nav-link" href="index.html">Presentacion</a></li>
+                    <li class="nav-item animate__animated animate__backInRight"><a class="nav-link" href="pages/formacion.html">Formacion</a></li>
+                    <li class="nav-item animate__animated animate__backInRight"><a class="nav-link" href="pages/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item animate__animated animate__backInRight"><a class="nav-link" href="pages/clientes.html">Clientes</a></li>
+                    <li class="nav-item animate__animated animate__backInRight"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    
-    <main class="container">
-      <aside class="sidebar">
-        <ul>
-        <li><p><img src="images/foto carnet.jpg" alt="no se pudo cargar la imagen" ></p></li>
-        <p>Apellido: García Buonacucina</p>
-        <p> Nombres: Diego</p>
-        <p>DNI: 22.375.133</p>
-        <p>Fecha de Nacimiento: 16/11/1971 (51 años).</p>
-        <p>Estado civil: Divorciado.</p>
-        <p>Hijos: 1 (19 años)</p>
-        <p>Dirección: 136 BIS nro. 482 City Bell</p>
-        <p>Celular:(0221) 15-357-0731</p>
-        <p>Email : garciab.diego@gmail.com</p>
-      </ul>
-      
-    
-    </aside>
-      <section class="main-content">
-        <div class="tabla1">
-          <div class="celda1">
-            <h3>Visión:
-            Ser un estudio de diseño líder, reconocido por su creatividad y capacidad para transformar ideas en experiencias visuales innovadoras, brindando soluciones únicas y funcionales a cada cliente.</h3>
-          </div>
-          <div class="celda1">
-            <h3>Misión:
-            Proporcionar soluciones de diseño personalizadas que comuniquen eficazmente las ideas de nuestros clientes, mediante un enfoque creativo, profesional y colaborativo, utilizando herramientas y tendencias vanguardistas para lograr resultados excepcionales.</h3>
-          </div>
+
+    <!-- Contenido principal -->
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Aside -->
+            <aside class="col-md-4 bg-light p-3 custom-rounded">
+                <ul>
+                    <li><img class="carnet" src="images/foto carnet1.jpg" alt="no se pudo cargar la imagen" ></li>
+                    <li>García Buonacucina Diego</li>
+                    <li>DNI: 22.375.133</li>
+                    <li>Fecha de Nacimiento: 16/11/1971 (53 años).</li>
+                    <li>Hijos: 1 (19 años)</li>
+                    <li>Dirección: 136 BIS nro. 482 City Bell</li>
+                    <li>Celular:(0221) 15-357-0731</li>
+                    <li>Email : garciab.diego@gmail.com</li>
+                </ul>
+            </aside>
+            <!-- Section -->
+            <section class="col-md-8">
+                <div class="tabla1">
+                    <div class="fila1">
+                        <div class=celda1>
+                            <h4>Visión:
+                            Ser un estudio de diseño líder, reconocido por su creatividad y capacidad para transformar ideas en experiencias visuales innovadoras, brindando soluciones únicas y funcionales a cada cliente.</h4>
+                        </div>
+                    </div>
+                        <div class="celda1">
+                            <h4>Misión:
+                            Proporcionar soluciones de diseño personalizadas que comuniquen eficazmente las ideas de nuestros clientes, mediante un enfoque creativo, profesional y colaborativo, utilizando herramientas y tendencias vanguardistas para lograr resultados excepcionales.</h4>
+                        </div>
+                    </div>
+                
+            </section>
         </div>
-      </section>
-
     </main>
-        <footer>
-            <p>E-mail: garciab.diego@gmail.com</p>
-        </footer>
-    </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 Mi Sitio Web - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-
 </html>
