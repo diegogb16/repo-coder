@@ -18,7 +18,6 @@ body {
   background-color: #dde6ed;
 }
 
-/* header */
 .bg-dark {
   background-color: #27374d !important;
 }
@@ -29,14 +28,23 @@ body {
   color: white !important;
 }
 
+/* Footer */
+footer {
+  position: relative;
+  width: 100%;
+}
+
 /*container*/
 .container mt-4 {
   padding-right: 0px !important;
   padding-left: 0px !important;
+  min-height: 100%;
 }
 .container mt-4 aside {
   width: 25%;
   background-color: #9db2bf;
+  gap: 10px;
+  padding: 5px;
 }
 
 .bg-light {
@@ -63,25 +71,26 @@ li .carnet {
 /*section*/
 .col-md-8 .tabla1 {
   display: flex;
-  flex-direction: column; /* Las filas se organizan en columna */
-  gap: 10px; /* Espaciado entre filas */
+  flex-direction: column;
+  gap: 10px;
   padding: 5px;
 }
 .col-md-8 .tabla1 .fila1 {
   display: flex;
-  gap: 10px; /* Espaciado entre celdas */
+  gap: 10px;
 }
 @media (max-width: 600px) {
   .col-md-8 .tabla1 .fila1 .fila1 {
     flex-direction: column; /* En móviles, las celdas se apilan */
   }
 }
-.col-md-8 .tabla1 .fila1 .celda1 {
+.col-md-8 .tabla1 .fila1 .celda1, .col-md-8 .tabla1 .fila1 .tabla2 .celda2, .col-md-8 .tabla2 .tabla1 .fila1 .celda2 {
   flex: 1; /* Todas las celdas ocupan el mismo ancho */
   background-color: #9db2bf;
   border: 1px solid #9db2bf;
   color: white;
-  padding: 20px;
+  max-width: 100%;
+  padding: 15px;
   text-align: center;
   border-radius: 2rem; /* Bordes redondeados */
 }
@@ -92,12 +101,6 @@ li .carnet {
 }
 .col-md-8 .tabla2 .celda2 {
   flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
-  background-color: #9db2bf;
-  border: 1px solid #9db2bf;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 2rem;
 }
 @media (max-width: 600px) {
   .col-md-8 .tabla2 .celda2 .celda2 {
@@ -107,10 +110,4 @@ li .carnet {
 .col-md-8 .tabla2 .celda2 .imagen1 {
   max-height: 180px;
   border-radius: 10px;
-}
-
-/* Footer */
-footer {
-  position: relative;
-  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
