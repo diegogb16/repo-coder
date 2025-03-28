@@ -69,7 +69,7 @@ li{
         flex-wrap: wrap; /* Permite que las celdas se ajusten */
         gap: 10px;
         .celda2 {
-            /*@extend .celda1;
+            /*@extend .celda1;*/
             flex: 1; /* Todas las celdas ocupan el mismo ancho */
             background-color: $azulMedio;
             border: 1px solid $azulMedio;

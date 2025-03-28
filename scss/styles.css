@@ -105,7 +105,7 @@ li .carnet {
   gap: 10px;
 }
 .col-md-8 .tabla2 .celda2 {
-  /*@extend .celda1;
+  /*@extend .celda1;*/
   flex: 1; /* Todas las celdas ocupan el mismo ancho */
   background-color: #9db2bf;
   border: 1px solid #9db2bf;
