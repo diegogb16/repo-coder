@@ -6,7 +6,8 @@
 .container mt-4{
     padding-right: 0px !important;
     padding-left: 0px !important;
-    min-height: 100%;
+    /*min-height: 100%;*/
+    flex-grow: 1 !important;
     
 aside {
     width: 25%;
@@ -44,6 +45,9 @@ li{
         @include flex (column, 10px);
         
         padding: 5px;
+        .titulos {
+            color:white;
+        }
         
         .fila1 {
             display: flex;
