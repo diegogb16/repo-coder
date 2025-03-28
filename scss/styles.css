@@ -18,6 +18,11 @@ body {
   background-color: #dde6ed;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .bg-dark {
   background-color: #27374d !important;
 }
@@ -84,7 +89,7 @@ li .carnet {
     flex-direction: column; /* En móviles, las celdas se apilan */
   }
 }
-.col-md-8 .tabla1 .fila1 .celda1, .col-md-8 .tabla1 .fila1 .tabla2 .celda2, .col-md-8 .tabla2 .tabla1 .fila1 .celda2 {
+.col-md-8 .tabla1 .fila1 .celda1 {
   flex: 1; /* Todas las celdas ocupan el mismo ancho */
   background-color: #9db2bf;
   border: 1px solid #9db2bf;
@@ -100,6 +105,15 @@ li .carnet {
   gap: 10px;
 }
 .col-md-8 .tabla2 .celda2 {
+  /*@extend .celda1;
+  flex: 1; /* Todas las celdas ocupan el mismo ancho */
+  background-color: #9db2bf;
+  border: 1px solid #9db2bf;
+  color: white;
+  max-width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 2rem; /* Bordes redondeados */
   flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
 }
 @media (max-width: 600px) {

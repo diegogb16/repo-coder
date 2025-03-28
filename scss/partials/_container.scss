@@ -69,7 +69,15 @@ li{
         flex-wrap: wrap; /* Permite que las celdas se ajusten */
         gap: 10px;
         .celda2 {
-            @extend .celda1;
+            /*@extend .celda1;
+            flex: 1; /* Todas las celdas ocupan el mismo ancho */
+            background-color: $azulMedio;
+            border: 1px solid $azulMedio;
+            color:white;
+            max-width: 100%;
+            padding: 15px;
+            text-align: center;
+            border-radius: 2rem; /* Bordes redondeados */
             flex: 1 1 calc(50% - 10px); /* Hace que cada celda ocupe el 48% del contenedor, dejando espacio entre ellas */
             
             @media (max-width: 600px) {
