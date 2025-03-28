@@ -71,6 +71,7 @@ li .carnet {
   max-width: 200px;
   display: block;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 /*section*/
@@ -128,5 +129,5 @@ li .carnet {
 
 .link-port {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
